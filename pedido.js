@@ -99,16 +99,24 @@ formas += "Opção 4|Crédito - sem desconto\n"
 var pagamento = parseFloat(prompt(formas));
 var TotalApagar = valorTotal + totalValor;
 
-if(formas == 1){
-    TotalApagar = valorTotal + totalValor * 0.1; 
-}else if(formas == 2){
-    TotalApagar = valorTotal + totalValor * 0.05; 
-}else if(formas == 3){
+if(pagamento == 1){
+    TotalApagar = valorTotal + totalValor * 0.1;
+    console.log("pagando via pix o cliente tem 10% de desconto:");
+    console.log("o seu pedido ficou em: " + TotalApagar) 
+}else if(pagamento == 2){
+    TotalApagar = valorTotal + totalValor * 0.05;
+    console.log("pagando no dinheiro o cliente tem 5% de desconto:");
+    console.log("o seu pedido ficou em: " + TotalApagar) 
+}else if(pagamento == 3){
     TotalApagar = valorTotal + totalValor * 0.03;
-}else if(formas == 4){
+    console.log("pagando no Débitoo cliente tem 3% de desconto:");
+    console.log("o seu pedido ficou em: " + TotalApagar)
+}else if(pagamento == 4){
     TotalApagar = valorTotal + totalValor 
+    console.log("pagando no Crédito o cliente não tem desconto:");
+    console.log("o seu pedido ficou em: " + TotalApagar)
 }else{
     console.log("Escolha uma forma de pagamentos Valida :");
 }
 
-console.log("O seu pedido ficou em: " + TotalApagar );
+
