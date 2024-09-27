@@ -66,7 +66,7 @@ if (codigoIrrf == 1){
 } else {
     console.log ("Digite um código VÁLIDO!");
 }
-var totalDescontos = (salario - descontoInss + descontoIrrf);
+var totalDescontos = salario - (descontoInss + descontoIrrf);
 
 console.log ("Seu SALÁRIO BRUTO se enquadra na FAIXA " + codigoInss + " e o DESCONTO é de: R$ " + descontoInss);
 console.log ("Seu SALÁRIO BRUTO se enquadra na FAIXA " + codigoIrrf + " e o DESCONTO é de: R$ " + descontoIrrf);
